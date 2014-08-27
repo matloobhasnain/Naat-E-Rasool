@@ -1,0 +1,21 @@
+//
+//  Naat.pch
+//  Naat-E-Rasool
+//
+//  Created by Matloob Hasnain on 27/08/2014.
+//  Copyright (c) 2014 terabyteLogixs. All rights reserved.
+//
+
+#ifndef Naat_E_Rasool_Naat_pch
+#define Naat_E_Rasool_Naat_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#import "Constant.h"
+#import <QuartzCore/QuartzCore.h>
+#import "NetworkLayer/NetworkLayer.h"
+#import "BusinessLayer/BusinessLayer.h"
+#import "ParseResponse.h"
+
+#endif
