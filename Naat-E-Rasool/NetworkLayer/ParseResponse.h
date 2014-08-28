@@ -74,8 +74,13 @@
 
 @protocol MyCustomeDelegateForReturningLoginDetail <NSObject>
 
-//@optional
+@optional
 -(void)allcategoriesReturning:(NSString *)status WithJobDetail:(NSMutableArray *)jobDetailArray;
+
+@optional
+-(void)allSubcategoriesReturning:(NSString *)status WithJobDetail:(NSMutableArray *)subCategoryArray;
+
+
 //
 //@optional
 //-(void)selectedJobDetail:(JobDetail *)jobDetailObj withStatus:(NSString*)status;

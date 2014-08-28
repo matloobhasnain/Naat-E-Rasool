@@ -8,6 +8,7 @@
 
 #import "MainCategoryVC.h"
 #import "CategoryCell.h"
+#import "SubCategoriesVC.h"
 @interface MainCategoryVC ()
             
 
@@ -64,6 +65,13 @@
     [[NetworkLayer sharedNetworkLayer]subCategoriesForSpecificID:catId];
 }
 
+#pragma mark - subCategories return Delegate
+-(void)allSubcategoriesReturning:(NSString *)status WithJobDetail:(NSMutableArray *)subCategoryArray
+{
+    SubCategoriesVC *subCategoryVC = (SubCategoriesVC*)[self.storyboard instantiateViewControllerWithIdentifier:@"subcategory"];
+    subCategoryVC.subCategoryArray = subCategoryArray;
+    [self.navigationController pushViewController:subCategoryVC animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     

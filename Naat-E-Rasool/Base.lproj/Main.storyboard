@@ -33,16 +33,51 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
                         <outlet property="tbl_categories" destination="F91-Ya-Qdg" id="320-Rv-KiS"/>
+                        <segue destination="uzn-mA-0CC" kind="push" id="eJk-VN-7T0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="601" y="475"/>
         </scene>
+        <!--Sub CategoriesVC-->
+        <scene sceneID="DxE-dK-G6B">
+            <objects>
+                <viewController storyboardIdentifier="subcategory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="uzn-mA-0CC" customClass="SubCategoriesVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Mes-wD-FrO">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" id="igh-24-iKp">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="m2v-Ul-nDD">
+                                <rect key="frame" x="0.0" y="64" width="320" height="504"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="uzn-mA-0CC" id="rLB-U1-dTX"/>
+                                    <outlet property="delegate" destination="uzn-mA-0CC" id="iK1-SZ-WTS"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="2oq-i9-Xhg"/>
+                    <connections>
+                        <outlet property="tbl_subCategories" destination="m2v-Ul-nDD" id="42P-MI-BgI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I3P-pI-Yaw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1001" y="475"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="TqP-kf-WZk">
             <objects>
-                <navigationController navigationBarHidden="YES" id="ePe-is-OJb" sceneMemberID="viewController">
+                <navigationController id="ePe-is-OJb" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="29n-rP-gwj">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

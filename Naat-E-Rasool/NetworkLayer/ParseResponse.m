@@ -61,7 +61,23 @@
 -(void)subCategories:(NSDictionary*)dictionary
 {
 
-
+    NSMutableArray *categoriesArray = [NSMutableArray array];
+    NSString *status = [dictionary valueForKey:@"status"];
+    if([status isEqualToString:@"success"])
+    {
+        
+        NSDictionary *responseDict = [dictionary valueForKey:@"sub_cat"];
+        for(NSDictionary *dict in responseDict)
+        {
+            CategoryDTO *category = [[CategoryDTO alloc]init];
+            category.categoryID = [[dict objectForKey:@"id"] integerValue];
+            category.categoryName = [dict objectForKey:@"name"];
+            [categoriesArray addObject:category];
+            
+        }
+        
+    }
+     [self.selectedValueDelegate allSubcategoriesReturning:status WithJobDetail:categoriesArray];
 }
 //-(void)parseSignInResponse:(NSDictionary*)dictionary {
 //    

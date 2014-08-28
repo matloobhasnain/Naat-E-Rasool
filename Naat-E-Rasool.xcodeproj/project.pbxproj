@@ -46,6 +46,7 @@
 		7910D95B19ADD3F700199648 /* NetworkLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910D93A19ADD3F700199648 /* NetworkLayer.m */; };
 		7910D95C19ADD3F700199648 /* ParseResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910D93C19ADD3F700199648 /* ParseResponse.m */; };
 		7910D96619ADD91600199648 /* BusinessLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910D96519ADD91600199648 /* BusinessLayer.m */; };
+		7930A15719AF4DE900F7B68C /* SubCategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7930A15619AF4DE900F7B68C /* SubCategoriesVC.m */; };
 		79C162F719ADFB9700231DF8 /* CategoryDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C162F619ADFB9700231DF8 /* CategoryDTO.m */; };
 		79C162FC19AE008100231DF8 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C162FA19AE008100231DF8 /* CategoryCell.m */; };
 		79C162FD19AE008100231DF8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C162FB19AE008100231DF8 /* CategoryCell.xib */; };
@@ -144,6 +145,8 @@
 		7910D96119ADD83B00199648 /* Naat.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Naat.pch; sourceTree = "<group>"; };
 		7910D96419ADD91600199648 /* BusinessLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BusinessLayer.h; sourceTree = "<group>"; };
 		7910D96519ADD91600199648 /* BusinessLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BusinessLayer.m; sourceTree = "<group>"; };
+		7930A15519AF4DE900F7B68C /* SubCategoriesVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SubCategoriesVC.h; sourceTree = "<group>"; };
+		7930A15619AF4DE900F7B68C /* SubCategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoriesVC.m; sourceTree = "<group>"; };
 		79C162F519ADFB9700231DF8 /* CategoryDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDTO.h; sourceTree = "<group>"; };
 		79C162F619ADFB9700231DF8 /* CategoryDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDTO.m; sourceTree = "<group>"; };
 		79C162F919AE008100231DF8 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
@@ -349,6 +352,8 @@
 			children = (
 				7910D8D919ADD10900199648 /* MainCategoryVC.h */,
 				7910D8DA19ADD10900199648 /* MainCategoryVC.m */,
+				7930A15519AF4DE900F7B68C /* SubCategoriesVC.h */,
+				7930A15619AF4DE900F7B68C /* SubCategoriesVC.m */,
 			);
 			name = VCs;
 			sourceTree = "<group>";
@@ -532,6 +537,7 @@
 				7910D8D519ADD10900199648 /* main.m in Sources */,
 				7910D94B19ADD3F700199648 /* MKAnnotationView+WebCache.m in Sources */,
 				7910D94E19ADD3F700199648 /* SDWebImageCompat.m in Sources */,
+				7930A15719AF4DE900F7B68C /* SubCategoriesVC.m in Sources */,
 				7910D95419ADD3F700199648 /* UIButton+WebCache.m in Sources */,
 				7910D95819ADD3F700199648 /* UIImageView+HighlightedWebCache.m in Sources */,
 				7910D95519ADD3F700199648 /* UIImage+GIF.m in Sources */,
