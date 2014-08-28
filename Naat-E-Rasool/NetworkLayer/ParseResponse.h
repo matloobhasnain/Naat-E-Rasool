@@ -31,6 +31,7 @@
 - (id)init;
 -(void)parseAllCategories:(NSDictionary*)dictionary;
 -(void)subCategories:(NSDictionary*)dictionary;
+-(void)allVideos:(NSDictionary*)dictionary;
 //-(void)parseSignInResponse:(NSDictionary*)dictionary;
 //-(void)parseJobDetailResponse:(NSDictionary*)dictionary;
 //-(void)parseCheckListResponse:(NSDictionary*)dictionary;
@@ -79,6 +80,9 @@
 
 @optional
 -(void)allSubcategoriesReturning:(NSString *)status WithJobDetail:(NSMutableArray *)subCategoryArray;
+
+@optional
+-(void)allVideosReturning:(NSString *)status WithJobDetail:(NSMutableArray *)videoArray;
 
 
 //

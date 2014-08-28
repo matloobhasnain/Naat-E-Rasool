@@ -71,7 +71,7 @@
 
 -(void)subCategoriesForSpecificID:(int)catId
 {
-
+      self.requestSerializer = [AFJSONRequestSerializer serializer];
     [self setResponseSerializer:[AFJSONResponseSerializer serializer]];
     [self showHUD];
     NSString *URL = [NSString stringWithFormat:@"%@sub_Cat?cat_id=%d",BASE_URL,catId];
@@ -81,6 +81,32 @@
         NSLog(@"signIn response: %@", responseObject);
         
         [[ParseResponse sharedParseResponse]subCategories:responseDictionary];
+        // Notify Listner
+        //[[NSNotificationCenter defaultCenter] postNotificationName:signInAPIResponse object:nil userInfo:nil];
+        [self removeHUD];
+    }
+      failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+          // Notify Listner
+          [self removeHUD];
+          //              [Utilities simpleOkAlertBox:@"Alert" Body:@"Some thing going wrong please check your internet connectivity and try again" delegate:nil];
+          //              [[NSNotificationCenter defaultCenter] postNotificationName:signInAPIResponseError object:nil userInfo:nil];
+          NSLog(@"%@",error);
+          
+      }];
+}
+
+
+-(void)getAllVideoesForSubCategory:(ParameterDTO*)parameter
+{
+    [self setResponseSerializer:[AFJSONResponseSerializer serializer]];
+    [self showHUD];
+    NSString *URL = [NSString stringWithFormat:@"%@all_uploads?subcat_id=%d&lang=%@&content_type=%@&offset=%d",BASE_URL,parameter.sub_CategoryID,parameter.language,parameter.content_Type,parameter.offSet];
+    [self GET:URL parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSDictionary *responseDictionary = (NSDictionary*)responseObject;
+        NSLog(@"signIn response: %@", responseObject);
+        
+        [[ParseResponse sharedParseResponse]allVideos:responseDictionary];
         // Notify Listner
         //[[NSNotificationCenter defaultCenter] postNotificationName:signInAPIResponse object:nil userInfo:nil];
         [self removeHUD];

@@ -79,6 +79,11 @@
     }
      [self.selectedValueDelegate allSubcategoriesReturning:status WithJobDetail:categoriesArray];
 }
+
+-(void)allVideos:(NSDictionary*)dictionary
+{
+
+}
 //-(void)parseSignInResponse:(NSDictionary*)dictionary {
 //    
 //    

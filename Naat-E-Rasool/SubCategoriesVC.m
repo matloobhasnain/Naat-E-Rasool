@@ -8,6 +8,7 @@
 
 #import "SubCategoriesVC.h"
 #import "CategoryCell.h"
+#import "ParameterDTO.h"
 @interface SubCategoriesVC ()
 
 @end
@@ -55,7 +56,13 @@
 }
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    
+    CategoryDTO *cat = [self.subCategoryArray objectAtIndex:indexPath.row];
+    ParameterDTO *param = [[ParameterDTO alloc]init];
+    param.sub_CategoryID = cat.categoryID;
+    param.content_Type = @"video";
+    param.offSet = 1;
+    param.language = @"English";
+    [[NetworkLayer sharedNetworkLayer]getAllVideoesForSubCategory:param];
 }
 
 

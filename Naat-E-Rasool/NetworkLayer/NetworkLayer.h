@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "AFHTTPRequestOperationManager.h"
 #import "MBProgressHUD.h"
-
+#import "ParameterDTO.h"
 @interface NetworkLayer : AFHTTPRequestOperationManager 
 
 @property (nonatomic,strong) MBProgressHUD *HUD;
@@ -18,7 +18,11 @@
 
 -(void)getAllCategories;
 -(void)subCategoriesForSpecificID:(int)catId;
-//
+-(void)getAllVideoesForSubCategory:(ParameterDTO*)parameter;
+
+
+
+
 //-(void)getUserProfileWithUserName:(NSString*)userName password:(NSString*)password;
 //
 //-(void)jobDetail:(int)JobId;
