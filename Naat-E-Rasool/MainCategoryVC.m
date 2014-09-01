@@ -9,6 +9,7 @@
 #import "MainCategoryVC.h"
 #import "CategoryCell.h"
 #import "SubCategoriesVC.h"
+#import "CategoryCollectionViewCell.h"
 @interface MainCategoryVC ()
             
 
@@ -31,34 +32,60 @@
 -(void)allcategoriesReturning:(NSString *)status WithJobDetail:(NSMutableArray *)jobDetailArray
 {
     categoryArray = jobDetailArray;
-    [self.tbl_categories reloadData];
+    [self.collection_Categories reloadData];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
 {
     return categoryArray.count;
 }
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    NSString * cellId = @"categoryCell";
-    CategoryCell* catCell = (CategoryCell*)[tableView dequeueReusableCellWithIdentifier:cellId];
-    if(catCell == nil)
-    {
-        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryCell" owner:self options:nil];
-        catCell = [nib objectAtIndex:0];
-    }
-    CategoryDTO *cat = [categoryArray objectAtIndex:indexPath.row];
-    
-    catCell.lblCategoryName.text = cat.categoryName;
 
-    return catCell;
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+        NSString * cellId = @"category";
+        CategoryCollectionViewCell* catCell = (CategoryCollectionViewCell*)[collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    
+        CategoryDTO *cat = [categoryArray objectAtIndex:indexPath.row];
+    
+        catCell.lbl_Name.text = cat.categoryName;
+    
+        return catCell;
+
+
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
 {
     [ParseResponse sharedParseResponse].selectedValueDelegate = self;
     CategoryDTO *cat  = [categoryArray objectAtIndex:indexPath.row];
     [self getSubcategories:cat.categoryID];
 }
+
+//- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+//{
+//    return categoryArray.count;
+//}
+//- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSString * cellId = @"categoryCell";
+//    CategoryCell* catCell = (CategoryCell*)[tableView dequeueReusableCellWithIdentifier:cellId];
+//    if(catCell == nil)
+//    {
+//        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"CategoryCell" owner:self options:nil];
+//        catCell = [nib objectAtIndex:0];
+//    }
+//    CategoryDTO *cat = [categoryArray objectAtIndex:indexPath.row];
+//    
+//    catCell.lblCategoryName.text = cat.categoryName;
+//
+//    return catCell;
+//}
+//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    [ParseResponse sharedParseResponse].selectedValueDelegate = self;
+//    CategoryDTO *cat  = [categoryArray objectAtIndex:indexPath.row];
+//    [self getSubcategories:cat.categoryID];
+//}
 
 -(void)getSubcategories:(int)catId
 {

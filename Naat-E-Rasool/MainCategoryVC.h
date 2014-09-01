@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MainCategoryVC : UIViewController <UITableViewDelegate,UITableViewDataSource,MyCustomeDelegateForReturningLoginDetail>
+@interface MainCategoryVC : UIViewController <UICollectionViewDataSource,UICollectionViewDelegate,MyCustomeDelegateForReturningLoginDetail>
 {
     NSMutableArray *categoryArray;
 }
 @property (weak, nonatomic) IBOutlet UITableView *tbl_categories;
+@property (weak, nonatomic) IBOutlet UICollectionView *collection_Categories;
 
 
 @end

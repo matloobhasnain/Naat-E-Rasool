@@ -48,6 +48,8 @@
 		7910D96619ADD91600199648 /* BusinessLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7910D96519ADD91600199648 /* BusinessLayer.m */; };
 		7930A15719AF4DE900F7B68C /* SubCategoriesVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 7930A15619AF4DE900F7B68C /* SubCategoriesVC.m */; };
 		7930A15A19AF5A0600F7B68C /* ParameterDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 7930A15919AF5A0600F7B68C /* ParameterDTO.m */; };
+		79AF51B319B463E60045EB05 /* yousuf11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 79AF51B219B463E60045EB05 /* yousuf11.jpg */; };
+		79AF51B619B4652C0045EB05 /* CategoryCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79AF51B519B4652C0045EB05 /* CategoryCollectionViewCell.m */; };
 		79C162F719ADFB9700231DF8 /* CategoryDTO.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C162F619ADFB9700231DF8 /* CategoryDTO.m */; };
 		79C162FC19AE008100231DF8 /* CategoryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 79C162FA19AE008100231DF8 /* CategoryCell.m */; };
 		79C162FD19AE008100231DF8 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 79C162FB19AE008100231DF8 /* CategoryCell.xib */; };
@@ -150,6 +152,9 @@
 		7930A15619AF4DE900F7B68C /* SubCategoriesVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SubCategoriesVC.m; sourceTree = "<group>"; };
 		7930A15819AF5A0600F7B68C /* ParameterDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParameterDTO.h; sourceTree = "<group>"; };
 		7930A15919AF5A0600F7B68C /* ParameterDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParameterDTO.m; sourceTree = "<group>"; };
+		79AF51B219B463E60045EB05 /* yousuf11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = yousuf11.jpg; sourceTree = "<group>"; };
+		79AF51B419B4652C0045EB05 /* CategoryCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCollectionViewCell.h; sourceTree = "<group>"; };
+		79AF51B519B4652C0045EB05 /* CategoryCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryCollectionViewCell.m; sourceTree = "<group>"; };
 		79C162F519ADFB9700231DF8 /* CategoryDTO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryDTO.h; sourceTree = "<group>"; };
 		79C162F619ADFB9700231DF8 /* CategoryDTO.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CategoryDTO.m; sourceTree = "<group>"; };
 		79C162F919AE008100231DF8 /* CategoryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CategoryCell.h; sourceTree = "<group>"; };
@@ -196,6 +201,7 @@
 		7910D8D119ADD10900199648 /* Naat-E-Rasool */ = {
 			isa = PBXGroup;
 			children = (
+				79AF51B119B463E60045EB05 /* Images */,
 				79C162F819AE004F00231DF8 /* tableCell */,
 				79C162F419ADFB7100231DF8 /* DTOs */,
 				7910D96319ADD8F700199648 /* BusinessLayer */,
@@ -387,6 +393,14 @@
 			path = BusinessLayer;
 			sourceTree = "<group>";
 		};
+		79AF51B119B463E60045EB05 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				79AF51B219B463E60045EB05 /* yousuf11.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 		79C162F419ADFB7100231DF8 /* DTOs */ = {
 			isa = PBXGroup;
 			children = (
@@ -404,6 +418,8 @@
 				79C162F919AE008100231DF8 /* CategoryCell.h */,
 				79C162FA19AE008100231DF8 /* CategoryCell.m */,
 				79C162FB19AE008100231DF8 /* CategoryCell.xib */,
+				79AF51B419B4652C0045EB05 /* CategoryCollectionViewCell.h */,
+				79AF51B519B4652C0045EB05 /* CategoryCollectionViewCell.m */,
 			);
 			name = tableCell;
 			sourceTree = "<group>";
@@ -488,6 +504,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79AF51B319B463E60045EB05 /* yousuf11.jpg in Resources */,
 				7910D8DE19ADD10900199648 /* Main.storyboard in Resources */,
 				79C162FD19AE008100231DF8 /* CategoryCell.xib in Resources */,
 				7910D8E019ADD10900199648 /* Images.xcassets in Resources */,
@@ -519,6 +536,7 @@
 				7910D8DB19ADD10900199648 /* MainCategoryVC.m in Sources */,
 				7910D96619ADD91600199648 /* BusinessLayer.m in Sources */,
 				7910D93E19ADD3F700199648 /* AFHTTPRequestOperationManager.m in Sources */,
+				79AF51B619B4652C0045EB05 /* CategoryCollectionViewCell.m in Sources */,
 				7910D95619ADD3F700199648 /* UIImage+MultiFormat.m in Sources */,
 				7910D95719ADD3F700199648 /* UIImage+WebP.m in Sources */,
 				7910D94A19ADD3F700199648 /* MJPopoverView.m in Sources */,

@@ -15,5 +15,6 @@
 @property (weak, nonatomic) IBOutlet UITableView *tbl_subCategories;
 
 @property(nonatomic,retain)NSMutableArray *subCategoryArray;
+@property (weak, nonatomic) IBOutlet UICollectionView *collection_SubCategory;
 
 @end

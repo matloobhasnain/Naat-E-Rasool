@@ -114,6 +114,8 @@
       failure:^(AFHTTPRequestOperation *operation, NSError *error) {
           // Notify Listner
           [self removeHUD];
+//          NSLog(@"Error: %@", [error debugDescription]);
+//          NSLog(@"Error: %@", [error localizedDescription]);
           //              [Utilities simpleOkAlertBox:@"Alert" Body:@"Some thing going wrong please check your internet connectivity and try again" delegate:nil];
           //              [[NSNotificationCenter defaultCenter] postNotificationName:signInAPIResponseError object:nil userInfo:nil];
           NSLog(@"%@",error);
